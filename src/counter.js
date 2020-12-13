@@ -1,4 +1,4 @@
-import { isValidElement, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const Counter = () => {
   const [counterOne, setCounterOne] = useState(0);
@@ -20,11 +20,13 @@ const Counter = () => {
 
   return (
     <>
-      <div>counterOne={counterOne}</div>
-      <span>{isEven ? "Even" : "Odd"}</span>
-      <button onClick={increaseCounterOne}>Increase Counter One</button>
-      <div>counterTwo={counterTwo}</div>
-      <button onClick={increaseCounterTwo}>Increase Counter Two</button>
+      <div>
+        <button onClick={increaseCounterOne}>counterOne={counterOne}</button>
+        <span>{isEven ? "Even" : "Odd"}</span>
+      </div>
+      <div>
+        <button onClick={increaseCounterTwo}>counterTwo={counterTwo}</button>
+      </div>
     </>
   );
 };
